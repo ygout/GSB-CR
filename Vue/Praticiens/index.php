@@ -6,7 +6,7 @@ require 'Vue/_Commun/navigation.php';
 ?>
 
 <div class="container">
-    <h2 class="text-center">Liste des praticienss</h2>
+    <h2 class="text-center">Liste des praticiens</h2>
     <div class="table-responsive">
         <table class="table table-hover table-condensed">
             <thead>

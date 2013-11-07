@@ -6,7 +6,7 @@ require_once 'Framework/Modele.php';
 class Praticien extends Modele {
 
     // Morceau de requête SQL incluant les champs de la table praticien
-    private $sqlPraticien = 'select id_praticien as idPraticien,lib_type_praticien as libTypePraticien,nom_praticien as nomPraticien,prenom_praticien as prenomPraticien,ville_praticien as villePraticien,adresse_praticien as adressePraticien,cp_praticien as cpPraticien,coef_notoriete as coefNotoriete from PRATICIEN P join TYPE_PRATICIEN TP on P.id_type_praticien=TP.id_type_praticien';
+    private $sqlPraticien = 'select id_praticien as idPraticien,P.id_type_praticien as idTypePraticien,lib_type_praticien as libTypePraticien,nom_praticien as nomPraticien,prenom_praticien as prenomPraticien,ville_praticien as villePraticien,adresse_praticien as adressePraticien,cp_praticien as cpPraticien,coef_notoriete as coefNotoriete from PRATICIEN P join TYPE_PRATICIEN TP on P.id_type_praticien=TP.id_type_praticien';
 
     // Renvoie la liste des praticiens
     public function getPraticiens() {
