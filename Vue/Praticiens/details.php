@@ -6,7 +6,7 @@ require 'Vue/_Commun/navigation.php';
 ?>
 
 <div class="container">
-    <h2 class="text-center">Praticien</h2>
+    <h2 class="text-center"><?= $this->nettoyer($praticien['libTypePraticien']) ?></h2>
     <div class="well">
         <form class="form-horizontal" role="form">
             <div class="form-group">
