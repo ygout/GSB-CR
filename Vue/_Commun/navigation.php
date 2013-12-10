@@ -30,7 +30,26 @@
                 </ul>
             </li>
             
-            <li class="disabled"><a href="#">Comptes-rendus</a></li>
+            <li class="dropdown <?= isset($menuComptesRendus) ? 'active' : '' ?>" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">comptes-rendus <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="compterendu/">Consulter</a></li>
+                    <li><a href="compterendu/ajout">Ajouter</a></li>
+                    
+                </ul>
+            </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+    <li>
+        <a href="connexion/deconnecter">
+            <span class="glyphicon glyphicon-log-out"></span>
+
+             Se déconnecter
+
+        </a>
+    </li>
+
+</ul>
     </div>
 </div>
