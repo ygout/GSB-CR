@@ -41,13 +41,13 @@ class ControleurPraticiens extends ControleurSecurise {
         $this->genererVue(array('praticiens' => $praticiens,'typesPraticien' => $typesPraticien));
     }
 
-    // Affiche le résultat de la recherche de praticien par rapport au type
+    // Affiche le résultat de la recherche avancée de praticiens 
     public function resultats() {
         if ($this->requete->existeParametre("idType")) {
             
             $idTypePraticien = $this->requete->getParametre("idType");
-            
-            $this->index($idTypePraticien);
+            $praticiensType=$this->praticien->getPraticiensType($idTypePraticien);
+            $this->genererVue(array('praticiens' => $praticiensType),"index");
         }
         else
             throw new Exception("Action impossible : aucun praticien défini");

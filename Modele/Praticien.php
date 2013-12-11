@@ -9,7 +9,7 @@ class Praticien extends Modele {
     private $sqlPraticien = 'select id_praticien as idPraticien,P.id_type_praticien as idTypePraticien,lib_type_praticien as libTypePraticien,nom_praticien as nomPraticien,prenom_praticien as prenomPraticien,ville_praticien as villePraticien,adresse_praticien as adressePraticien,cp_praticien as cpPraticien,coef_notoriete as coefNotoriete from PRATICIEN P join TYPE_PRATICIEN TP on P.id_type_praticien=TP.id_type_praticien';
    
     // Renvoie la liste des praticiens par rapport à l'idType
-    public function getPraticiensType($idType) {
+    public function getPraticiensType($idType,$ville=null,$nom=null) {
        
         $sql = $this->sqlPraticien . ' where TP.id_type_praticien =?';
         $praticiens = $this->executerRequete($sql,array($idType));
